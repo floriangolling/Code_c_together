@@ -33,7 +33,7 @@ export default Vue.extend({
       input: "",
       inputRadio: false,
       output: "",
-      socket: io('localhost:8080'),
+      socket: io('https://codetogetheronline.herokuapp.com'),
       number: 0
     }
   },
