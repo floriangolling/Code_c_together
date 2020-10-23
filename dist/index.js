@@ -20,7 +20,7 @@ let inputRadio = false;
 let app = express_1.default();
 let connections = [];
 let output = "";
-const server = app.listen(8080, function () {
+const server = app.listen(process.env.PORT, function () {
     console.log('server is running on port 8080');
 });
 const io = socket_io_1.default(server);
