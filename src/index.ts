@@ -20,7 +20,7 @@ let app = express();
 let connections = [] as any;
 let output = ""
 
-const server = app.listen(8080, function() {
+const server = app.listen(process.env.PORT, function() {
 	console.log('server is running on port 8080')
 })
 
