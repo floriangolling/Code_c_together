@@ -1,0 +1,107 @@
+{
+  "name": "box-ideas",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf distVue",
+    "fullclean": "rm -rf dist && rm -rf distVue && rm -rf node_modules",
+    "build:all": "vue-cli-service build && tsc && echo \"\\x1b[92m Compilation's done.. dist/ for server and distVue/ from vue.. try npm run launch to launch the server..\\x1b[0m\"",
+    "start": "node dist/index.js",
+    "db:migrate": "node dist/database/umzug.js",
+    "build:server": "tsc && echo \"\\x1b[92m Server compilation's done in ./dist folder..\\x1b[0m\"",
+    "build:vue": "vue-cli-service build",
+    "vue:watch": "vue-cli-service build --watch",
+    "ts:watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@types/express-ws": "^3.0.0",
+    "@types/sequelize": "^4.28.9",
+    "@types/socket.io": "^2.1.11",
+    "@types/socket.io-client": "^1.4.34",
+    "@types/umzug": "^2.3.0",
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "buefy": "^0.9.3",
+    "bulma": "^0.9.1",
+    "compilex": "^0.7.4",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "monaco-editor-vue": "^1.0.10",
+    "monaco-editor-webpack-plugin": "^1.9.1",
+    "pg": "^8.4.1",
+    "pg-hstore": "^2.3.3",
+    "pug-loader": "^2.4.0",
+    "save": "^2.4.0",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.1",
+    "umzug": "^2.3.0",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^8.4.2",
+    "vue-simple-alert": "^1.1.1",
+    "vue-socket.io": "^3.0.10",
+    "vuex": "^3.5.1",
+    "vuex-class": "^0.3.2",
+    "vuex-map-fields": "^1.4.1",
+    "vuex-typescript": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/webpack-env": "^1.15.3",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "^4.5.7",
+    "@vue/cli-plugin-eslint": "^4.5.7",
+    "@vue/cli-plugin-typescript": "^4.5.7",
+    "@vue/cli-service": "^4.5.7",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.3.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "file-loader": "^6.1.0",
+    "node-sass": "^4.14.1",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.2",
+    "typescript": "~3.9.3",
+    "vue-cli-plugin-express": "~1.0.2",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.12",
+    "webfont": "^9.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/typescript"
+    ],
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser"
+    },
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
